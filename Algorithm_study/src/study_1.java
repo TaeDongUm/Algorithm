@@ -20,6 +20,7 @@ public class study_1 {
 	}
 
 }
+//test
 //class Max3 {
 //	public static void main(String[] args) {
 //		Scanner stdIn = new Scanner(System.in);
