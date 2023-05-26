@@ -27,3 +27,20 @@ public class study_3 {
 	}
 
 }
+//class BMinusA{
+//	public static void main(String[] args) {
+//		Scanner stdiD2 = new Scanner(System.in);
+//		int a;
+//		int b;
+//		int result=0;
+//		do {
+//			System.out.print("a의 값: ");
+//			a = stdiD2.nextInt();
+//			System.out.println("");
+//			System.out.print("b의 값: ");
+//			b = stdiD2.nextInt();
+//		} while(a>=b);
+//		result = b-a;
+//		System.out.println("결과: " + result);
+//	}
+//}
