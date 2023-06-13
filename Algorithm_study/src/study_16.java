@@ -11,4 +11,14 @@ public class study_16{
         System.out.println(String.format("%.2f",c));
         // Math.round를 써서 하니까 5000 처럼 소수점이 0인 경우 절삭해서 제출이 틀렸다고 나옴.
 }
+	
+}
+
+class SumAverage {
+	void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		System.out.println((a+b) +" "+(double)(a+b)/2);
+	}
 }
