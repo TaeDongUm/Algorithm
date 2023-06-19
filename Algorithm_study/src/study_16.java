@@ -89,3 +89,24 @@ class IfElseIf {
 		}
 	}
 }
+class CallAttendence {
+	void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int John = 1;
+		int Tom = 2;
+		int Paul = 3;
+		if(John == a) {
+			System.out.println("John");
+		}
+		else if(Tom == a) {
+			System.out.println("Tom");
+		}
+		else if(Paul == a) {
+			System.out.println("Paul");
+		}
+		else {
+			System.out.println("Vacancy");
+		}
+	}
+}
