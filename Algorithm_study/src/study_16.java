@@ -184,7 +184,7 @@ class AndOf {
         else {
             System.out.println("no");
         }
-}
+	}
 }
 class IoException {
 	void main(String[] args) throws IOException{
