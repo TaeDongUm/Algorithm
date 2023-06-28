@@ -41,3 +41,24 @@ class AndOr {
 		bw.close();
 	}
 }
+class Season {
+	void main(String[] args) throws Exception {
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    int m = Integer.parseInt(br.readLine());
+    if(m>=3 && m<=5){
+        bw.write("Spring");
+    }
+    else if(m>=6 && m<=8) {
+        bw.write("Summer");
+    }
+    else if(m>=9 && m<=11){
+        bw.write("Fall");
+    }
+    else {
+        bw.write("Winter");
+    }
+    bw.flush();
+    bw.close();
+	}
+}
