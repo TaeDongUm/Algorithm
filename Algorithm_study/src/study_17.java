@@ -41,7 +41,7 @@ class AndOr {
 		bw.close();
 	}
 }
-class Seasons {
+class Seasons1 {
 	void main(String[] args) throws Exception {
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
