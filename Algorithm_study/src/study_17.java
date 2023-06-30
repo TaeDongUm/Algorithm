@@ -62,3 +62,32 @@ class Seasons1 {
     bw.close();
 	}
 }
+class Score1{
+
+    void main(String[] args) throws Exception {
+        // 여기에 코드를 작성해주세요.
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String s = br.readLine();
+        int a = Integer.parseInt(s);
+        int b = Integer.parseInt(s);
+        if(a>=90){
+            if(b>=95){
+                bw.write(100000);
+            }
+            else if(b>=90){
+                bw.write(50000);
+            }
+            else{
+                bw.write(0);
+            }
+        }
+        else {
+            bw.write(0);
+        }
+        bw.flush();
+        bw.close();
+
+	    }
+	
+}
