@@ -4,6 +4,7 @@ import java.util.StringTokenizer;
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.text.MessageFormat;
 
 public class study_17{
 
@@ -116,4 +117,51 @@ class CompareScore{
 		bw.flush();
 		bw.close();
 	}
+}
+// SWEA 사이트에서 Error Message:
+//Memory error occured, (e.g. segmentation error, memory limit Exceed, stack overflow,... etc)
+// 오류 뜸
+class SWEA2072{
+	void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int a = Integer.parseInt(br.readLine());
+		int b=0;
+		for (int i=0;i<a;i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			for(int j=0;j<10;j++) {
+				b = b +  Integer.parseInt(st.nextToken());
+			}
+			MessageFormat.format("#{} {}",i+1,b);
+		}
+	}
+}
+
+// 다른 사람 풀이
+class Solution{
+    public static void main(String args[]) throws Exception
+    {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
+        StringTokenizer st;
+ 
+        int T = Integer.parseInt(br.readLine());
+ 
+        for(int test_case = 1; test_case <= T; test_case++)
+        {
+            int result = 0;
+            st = new StringTokenizer(br.readLine());
+             
+            while(st.hasMoreTokens()) {
+                int temp = Integer.parseInt(st.nextToken());
+                if((temp % 2) == 1) {
+                    result += temp;
+                }
+            }
+ 
+            sb.append("#" + test_case + " " + result + "\n");
+        }
+        bw.write(sb.toString());
+        bw.flush();
+    }
 }
