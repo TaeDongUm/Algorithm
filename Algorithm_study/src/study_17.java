@@ -170,3 +170,24 @@ class Solution{
         bw.flush();
     }
 }
+
+class SWEA2068{
+	void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st;
+		int a = Integer.parseInt(br.readLine());
+		for(int i =0;i<a;i++) {
+			int result;
+			int b=0;
+			int max=0;
+			st = new StringTokenizer(br.readLine());
+			for(int j =0; j<10;j++) {
+				b = Integer.parseInt(st.nextToken());
+				if(max<=b) {
+					max = b;
+				}
+			}
+			System.out.println("#"+(i+1)+" "+max);
+		}
+	}
+}
