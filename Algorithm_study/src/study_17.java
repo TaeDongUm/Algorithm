@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.text.MessageFormat;
+import java.util.Scanner;
 
 public class study_17{
 
@@ -127,11 +128,15 @@ class SWEA2072{
 		int a = Integer.parseInt(br.readLine());
 		int b=0;
 		for (int i=0;i<a;i++) {
+			int result = 0;
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			for(int j=0;j<10;j++) {
-				b = b +  Integer.parseInt(st.nextToken());
+				b =  Integer.parseInt(st.nextToken());
+				if(b%2 !=0) {
+				result +=b;
 			}
-			MessageFormat.format("#{} {}",i+1,b);
+			System.out.println("#"+(i+1)+" "+result);
+			}
 		}
 	}
 }
