@@ -191,3 +191,27 @@ class SWEA2068{
 		}
 	}
 }
+
+class Solution1 {
+	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		for (int tc=0; tc<T;tc++) {
+			int t = sc.nextInt();
+			int[] Score = new int[101];
+			for(int i = 0;i<1000;i++) {
+				int n = sc.nextInt();
+				Score[n]++;
+			}
+			int count=0;
+			int mode=0;
+			for (int i = 0; i<Score.length;i++) {
+				if(Score[i]>=count) {
+					count = Score[i];
+					mode = i;
+				}
+			}
+			System.out.println("#"+(tc+1)+" "+mode);
+		}
+	}
+}
