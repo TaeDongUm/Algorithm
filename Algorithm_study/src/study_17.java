@@ -6,9 +6,10 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.text.MessageFormat;
 import java.util.Scanner;
+import java.lang.StringBuffer;
 
 public class study_17{
-
+	
 	public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -193,7 +194,7 @@ class SWEA2068{
 }
 
 class Solution1 {
-	public static void main(String[] args) throws Exception {
+	 void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
 		for (int tc=0; tc<T;tc++) {
@@ -213,5 +214,55 @@ class Solution1 {
 			}
 			System.out.println("#"+(tc+1)+" "+mode);
 		}
+	}
+}
+class Rotate{
+	void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int TC = sc.nextInt();
+	for(int i =0;i<TC;i++) {
+		int N = sc.nextInt();
+		int[][] arr = new int[N][N];
+		String[] rotate90= new String[N];
+		String[] rotate180 = new String[N];
+		String[] rotate270 = new String[N];
+		for(int r =0; r<N;r++) {
+			for(int c =0;c<N;c++) {
+				arr[r][c]=sc.nextInt();
+			}
+		}
+		// 90 rotate
+		for (int c=0; c<N;c++) {
+			String s ="";
+			for (int r=0; r<N; r++) {
+				s += Integer.toString(arr[r][c]);
+			}
+			StringBuffer sb = new StringBuffer(s);
+			String reverse = sb.reverse().toString();
+			rotate90[c] = reverse;
+		}
+		// 180 rotate
+		for(int r=0;r<N;r++) {
+			String s ="";
+			for(int c =0;c<N;c++) {
+				s += Integer.toString(arr[r][c]);
+			}
+			StringBuffer sb = new StringBuffer(s);
+			String reverse = sb.reverse().toString();
+			rotate180[N-1-r] = reverse;
+		}
+		// 270 rotate
+		for(int c =0;c<N;c++) {
+			String s ="";
+			for(int r =0; r<N;r++) {
+				s += Integer.toString(arr[r][c]);
+			}
+			rotate270[N-1-c] = s;
+		}
+		System.out.println("#"+(i+1));
+		for(int n =0; n<N;n++) {
+			System.out.println(rotate90[n]+" "+ rotate180[n]+" "+ rotate270[n]);
+		}
+	}
 	}
 }
