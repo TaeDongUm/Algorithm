@@ -1,12 +1,5 @@
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
 import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.text.MessageFormat;
 import java.util.Scanner;
-import java.lang.StringBuffer;
 
 public class study_18{
 	
@@ -72,6 +65,5 @@ public class study_18{
 			System.out.println("#"+(i+1)+" "+answer);
 		}
     }
-	
 	
 }
