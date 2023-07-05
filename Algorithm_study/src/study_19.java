@@ -28,8 +28,9 @@ public class study_19{
 			for(int r =0;r<N;r++) {
 				for(int c =0;c<N;c++) {
 					int sum =0;
+					sum += arr[r][c];
 					for(int k =0;k<4;k++) {
-						for(int m =0;m<=M-1;m++) {
+						for(int m =1;m<=M-1;m++) {
 							if(((r+dx[k]*m>=0) && (r+dx[k]*m<N)) &&((c+dy[k]*m>=0) && (c+dy[k]*m<N))) {
 								sum += arr[r+dx[k]*m][c+dy[k]*m];
 							}
@@ -41,8 +42,9 @@ public class study_19{
 			for(int r =0; r<N;r++) {
 				for(int c =0; c<N;c++) {
 					int sum =0;
+					sum += arr[r][c];
 					for(int k =0;k<4;k++) {
-						for(int m = 0;m<=M-1;m++) {
+						for(int m = 1;m<=M-1;m++) {
 							if(((r+xdx[k]*m>=0) && (r+xdx[k]*m<N)) &&((c+xdy[k]*m>=0) && (c+xdy[k]*m<N))) {
 								sum += arr[r+xdx[k]*m][c+xdy[k]*m];
 							}
