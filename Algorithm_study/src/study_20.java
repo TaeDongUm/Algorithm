@@ -1,7 +1,6 @@
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.Scanner;
-import java.lang.Math;
 import java.io.BufferedReader;
 
 // java EOF
