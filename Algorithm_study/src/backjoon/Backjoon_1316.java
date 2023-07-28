@@ -1,3 +1,4 @@
+package backjoon;
 import java.util.Scanner;
 
 class Backjoon_1316{
