@@ -17,19 +17,21 @@ public class backjoon_1244 {
 		StringTokenizer st2 = new StringTokenizer(br.readLine());
 		int m=Integer.parseInt(st2.nextToken());
 		for(int i=0;i<m;i++) {
-			int gen=Integer.parseInt(st2.nextToken());
-			int x=Integer.parseInt(st2.nextToken())-1;
+			StringTokenizer st3 = new StringTokenizer(br.readLine());
+			int gen=Integer.parseInt(st3.nextToken());
+			int num=Integer.parseInt(st3.nextToken())-1;
 			if(gen==1) {
-				for(int j=x;j<n;j+=x+1) {
+				for(int j=num;j<n;j+=num+1) {
 					switch1[j]=1-switch1[j];
 				}
 			}else {
-				int mk=Math.min(x, n-1-x);
-				switch1[x]=1-switch1[x];
+				int mk=Math.min(num, n-1-num);
+				switch1[num]=1-switch1[num];
 				for(int j=1;j<=mk;j++) {
-					if(switch1[x-j]!=switch1[x+j]) break;
-					switch1[x-j]=1-switch1[x-j];
-					switch1[x+j]=1-switch1[x+j];
+					if(switch1[num-j]!=switch1[num+j])
+						break;
+					switch1[num-j]=1-switch1[num-j];
+					switch1[num+j]=1-switch1[num+j];
 				}
 			}
 		}
