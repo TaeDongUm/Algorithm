@@ -8,14 +8,13 @@ public class backjoon_2869 {
 		int B = sc.nextInt();
 		int V = sc.nextInt();
 		int cnt =0;
-		while(true) {
-			if(V <=A) {
-				cnt++;
-				break;
-			}
-			V-=(A-B);
-			cnt++;
-		}
+		cnt = V/(A-B)-((A/(A-B))-1);
+		
+//		if(((V/A)*B+ V%A)%A !=0) {
+//			cnt +=((V/A)*B+ V%A)/A +1;
+//		}else {
+//			cnt +=((V/A)*B+ V%A)/A;
+//		}
 		System.out.println(cnt);
 	}
 
