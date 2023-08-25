@@ -2,9 +2,16 @@ package backjoon;
 import java.util.Scanner;
 // 다른 사람 풀이 공부
 // 참고사이트 https://st-lab.tistory.com/74
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
 public class backjoon_1193 {
  
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
+		BufferedReader br  = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		
  
 		Scanner sc = new Scanner(System.in);
 		int X = sc.nextInt();
